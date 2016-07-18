@@ -92,6 +92,11 @@ describe('javascript-Recall', function() {
         var result = repeatElements(['a', 'b', 'c']);
         expect(result).toEqual(['a', 'b', 'c', 'a', 'b', 'c']);
     });
+    
+       it('Solution #2 repeats the elements of an array', function() {
+        var result = repeatElements_2(['a', 'b', 'c']);
+        expect(result).toEqual(['a', 'b', 'c', 'a', 'b', 'c']);
+    });
 
     it('turns a number string into a number', function() {
         var result = stringToNumber('3');

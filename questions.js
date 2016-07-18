@@ -124,11 +124,23 @@ var makeNegative = function(number) {
 }
 
 var numberOfPalindromes = function(array) {
-    return 'Write your method here';
+    var tab = [];
+    
+    for(var i = 0; i < array.length; i++){
+        var word = array[i].split("").join("");
+        var reverse_word = word.split("").reverse().join("");
+/*        console.log("sortie de word: "+ word);
+        console.log("sortie de reverse_word: "+ reverse_word);*/
+        if(word == reverse_word){
+            tab.push(reverse_word);
+            console.log(tab);
+        }
+    }
+    return tab.length;
 }
 
 var shortestWord = function(array) {
-    result =array[0];
+    result = array[0];
     for (var i = 0; i < array.length; i++) {
         if(result.length > array[i].length){
             result = array[i];
@@ -151,23 +163,58 @@ var longestWord = function(array) {
 }
 
 var sumNumbers = function(array) {
-    return 'Write your method here';
+    var sommes = 0;
+    for(var i= 0; i < array.length; i++){
+        sommes = array[i] + sommes;
+        console.log(sommes);
+        /*return sommes; pas de return ici il sera rappeler après;*/
+    }
+    console.log(sommes);
+    return sommes;
 }
 
 var repeatElements = function(array) {
-    return 'Write your method here';
+    /*évite une boucle infini avec la taille du tableau*/
+var tab =array.length;
+    for(var i =0; i < tab; i++){
+       array.push(array[i]);
+    }
+    console.log("sortie de repeat : "+array);
+    return array;
+}
+
+var repeatElements_2 = function(array) {
+
+        var repeat = array.concat(array);
+
+    return repeat;
 }
 
 var stringToNumber = function(string) {
-    return 'Write your method here';
+    var tonumber = Number(string);
+    console.log(tonumber);
+    return tonumber;
 }
 
 var calculateAverage = function(array) {
-    return 'Write your method here';
+    var sommes = 0;
+    
+    for(var i= 0; i < array.length; i++){
+        sommes = array[i] + sommes;
+        console.log(sommes);
+        /*return sommes; pas de return ici il sera rappeler après;*/
+    }
+    var average = sommes/array.length;
+    console.log(sommes);
+    console.log("la moyenne de la somme du tableau est: "+ average);
+    return average;
 }
 
 var getElementsUntilGreaterThanFive = function(array) {
-    return 'Write your method here';
+    for(var i=0; i < array.length; i++){
+        if(0 >== array[i])
+    }
+    return until_five;
 }
 
 var convertArrayToObject = function(array) {
