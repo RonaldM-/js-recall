@@ -211,8 +211,19 @@ var calculateAverage = function(array) {
 }
 
 var getElementsUntilGreaterThanFive = function(array) {
+    var until_five = [];
+    tab = array;
     for(var i=0; i < array.length; i++){
-        if(0 >== array[i])
+
+        if(5 >= array[i]){
+            until_five.push(array[i]);
+            console.log(until_five);
+            }
+
+        else{
+            console.log("dans else : "+until_five);
+            return until_five;
+        }
     }
     return until_five;
 }
@@ -222,7 +233,13 @@ var convertArrayToObject = function(array) {
 }
 /////////////////////////////////////////////
 var getAllLetters = function(array) {
-    return 'Write your method here';
+    var tab=[];
+    var string = array.toString();
+    console.log("en string :"+ string);
+    string.split("").sort();
+    console.log(string);
+    tab.push(string);
+    return tab;
 }
 
 var swapKeysAndValues = function(object) {
